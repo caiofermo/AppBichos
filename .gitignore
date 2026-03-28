@@ -1,0 +1,5 @@
+# pastas de dependencias
+__pycache__
+
+# variaveis de ambiente
+.venv
