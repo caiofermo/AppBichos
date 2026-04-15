@@ -3,12 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+    <script src="index.js" defer></script>
     <title>Document</title>
 </head>
 <body>
     <h1>AppBichos-aplicativo para cadastro de animais </h1>
     <h2>Cadastre um novo animal</h2>
-    <input type="text" id = "nome" placeholder="Nome do animal">
-    <input type="submit" value="Gravar">
+    <form id="form_animal">
+        <input type="text" id = "nome" placeholder="Nome do animal">
+        <input type="text" id = "idade" placeholder="Idade do animal">
+        <input type="text" id = "">
+        <input type="submit" value="Gravar">
+    </form>
+
+    <h2>Animais cadastrados</h2>
+    <ul id="lista-animais">
+        
+    </ul>
+    
+
 </body>
 </html>
