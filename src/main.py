@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from uuid import UUID, uuid4
 from enum import Enum
+from fastapi.middleware.cors import CORSMiddleware
 
 # enuns dos sexo dos animais haha sexo kkk 
 class sexoEnum(str, Enum):
@@ -17,6 +18,19 @@ class Animal(BaseModel):
     cor : str
 
 app = FastAPI()
+
+origins = [
+    "http://127.0.0.1:5500",
+    "http://localhost:5500"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # animais ficam armazenados nesta lista
 db_animais = []
